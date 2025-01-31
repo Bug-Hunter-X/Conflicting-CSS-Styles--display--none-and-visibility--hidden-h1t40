@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // The bug lies in this script section
+    document.getElementById("myDiv").style.display = "none";
+    document.getElementById("myDiv").style.visibility = "hidden";
+    // Both display: none and visibility: hidden are used together, conflicting and creating an uncommon error
+    
+  </script>
+</body>
+</html>
